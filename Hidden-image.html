@@ -1,0 +1,124 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html lang="en"> <!-- Root HTML element with language set to English -->
+<head> <!-- Document head starts -->
+    <meta charset="UTF-8"> <!-- Set character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport meta -->
+    <title>Hidden Image Gallery</title> <!-- Page title shown in browser tab -->
+    <style> /* Inline CSS styles start */
+        * { /* Universal selector for base resets */
+            margin: 0; /* Remove default margins */
+            padding: 0; /* Remove default padding */
+            box-sizing: border-box; /* Include border/padding in element size */
+            font-family: 'Poppins', sans-serif; /* Set base font family */
+        } /* End universal selector */
+        
+        body { /* Page body styles */
+            background-image: url("wallpaper.jpg"); /* Set background image */
+            background-size: cover; /* Cover entire viewport */
+            color: white; /* Base text color */
+            display: flex; /* Use flex layout */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            min-height: 100vh; /* Full viewport height */
+            padding: 2rem; /* Outer spacing */
+        } /* End body styles */
+        
+        h1 { /* Main heading styles */
+            margin-bottom: 2rem; /* Space below heading */
+            font-size: 2.5rem; /* Heading size */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Increase spacing between letters */
+            text-align: center; /* Center the heading */
+            color: #fff; /* White text color */
+            text-shadow: 0 0 15px rgba(255,255,255,0.7); /* Glow effect */
+        } /* End h1 styles */
+        
+        .gallery { /* Container for photo thumbnails */
+            display: flex; /* Flex layout for images */
+            flex-wrap: wrap; /* Allow wrapping to next line */
+            justify-content: center; /* Center items horizontally */
+            gap: 1.5rem; /* Space between photos */
+            max-width: 1200px; /* Limit gallery width */
+        } /* End gallery styles */
+        
+        .photo img { /* Individual image styles */
+            width: 14rem; /* Thumbnail width */
+            height: 9rem; /* Thumbnail height */
+            object-fit: cover; /* Crop to fill without distortion */
+            border-radius: 15px; /* Rounded corners */
+            border: 2px solid white; /* White border */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* Drop shadow */
+            opacity: 0; /* Start hidden */
+            filter: grayscale(100%) blur(2px); /* Hidden look: gray + blur */
+            transition: all 0.6s ease-in-out; /* Smooth hover transition */
+            cursor: pointer; /* Pointer cursor on hover */
+        } /* End photo image styles */
+        
+        .photo img:hover { /* Hover effects for images */
+            opacity: 1; /* Reveal image */
+            filter: grayscale(0%) blur(0); /* Remove gray and blur */
+            transform: scale(1.2); /* Enlarge on hover */
+            box-shadow: 0 8px 30px rgba(255,255,255,0.8); /* Stronger glow */
+        } /* End hover styles */
+        /* Responsive */
+        @media (max-width: 768px) { /* Tablet breakpoint */
+            .photo img { /* Smaller thumbnails on tablets */
+                width: 10rem; /* Reduced width */
+                height: 7rem; /* Reduced height */
+            } /* End tablet image size */
+        } /* End tablet media query */
+        @media (max-width: 480px) { /* Mobile breakpoint */
+            h1 { /* Smaller heading on mobile */
+                font-size: 1.8rem; /* Reduced heading size */
+            } /* End mobile h1 size */
+            .photo img { /* Smaller thumbnails on mobile */
+                width: 8rem; /* Further reduced width */
+                height: 6rem; /* Further reduced height */
+            } /* End mobile image size */
+        } /* End mobile media query */
+    </style> <!-- End of inline CSS -->
+</head> <!-- Document head ends -->
+<body> <!-- Document body starts -->
+    <h1>Hidden Image Gallery</h1> <!-- Page main heading -->
+    
+    <div class="gallery"> <!-- Gallery container -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="Attack on Titan.jpg" alt="Attack on Titan"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="● ⌇ Eren & Mikasa.jpg" alt="Eren & Mikasa"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="Dandadan.jpg" alt="Dandadan"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="download (1).jpg" alt="Anime Pic"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="download (2).jpg" alt="Anime Pic"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="download (3).jpg" alt="Anime Pic"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="download (4).jpg" alt="Anime Pic"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="download.jpg" alt="Anime Pic"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="narruto hinata.jpg" alt="Naruto & Hinata"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="OML I- THEY ARE ADORABLE.jpg" alt="Cute Anime"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="mitsuri.jpg" alt="Mitsuri"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+        <div class="photo"> <!-- Photo wrapper -->
+            <img src="I want to eat.jpg" alt="Anime Pic"> <!-- Thumbnail image -->
+        </div> <!-- End photo wrapper -->
+    </div> <!-- End gallery container -->
+</body> <!-- Document body ends -->
+</html> <!-- End of HTML document -->
